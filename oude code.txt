@@ -1,0 +1,55 @@
+using System;
+
+namespace opdracht_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //opdracht 1
+            int MaxAttempts = 3;
+            string name;
+            string wachtwoord;
+            int poging = 0;
+
+            Console.WriteLine("Wat is uw naam?");
+            name = Console.ReadLine();
+
+            do
+            {
+                if (MaxAttempts == 1)
+                {
+                    Console.WriteLine("LET OP: laatste poging");    
+                }   
+                Console.WriteLine("Wat is uw wachtwoord?");
+                wachtwoord = Console.ReadLine();
+                MaxAttempts--;
+                poging++;
+                Console.WriteLine("Poging " + poging.ToString() + ", van 3");
+            } while (MaxAttempts > 0);
+            login(name, wachtwoord);
+
+            Console.ReadLine();
+
+
+        }
+
+        private static void login(string name, string wachtwoord)
+        {
+            if (wachtwoord == "SHARPSOUND")
+            {
+                Console.WriteLine("Welkom bij SoundSharp " + name);
+            }
+            else if(wachtwoord == "dikzak")
+            {
+                Console.WriteLine("Welkom bij SoundSharp " + name);
+            }
+            else
+            {
+                Console.WriteLine("Password is onjuist!");
+            }
+        }
+
+
+    }
+}
