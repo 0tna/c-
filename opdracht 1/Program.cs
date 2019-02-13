@@ -48,6 +48,7 @@ namespace SoundSharp
         {
             IDictionary<char, string> menu = new Dictionary<char, string>();
             menu['1'] = "Overzicht mp3 spelers";
+            menu['2'] = "Toon voorraad";
             menu['9'] = "Exit";
 
             foreach (KeyValuePair<char, string> menuItem in menu)
@@ -68,6 +69,10 @@ namespace SoundSharp
                             ShowMP3Players();
                             break;
 
+                        case '2':
+                            ShowVoorraad();
+                            break;
+
                         case '9':
                             Console.WriteLine("Tot ziens!");
                             return;
@@ -76,18 +81,19 @@ namespace SoundSharp
             }
         }
 
+
+        static void ShowVoorraad()
+        {
+            Console.WriteLine("Om het programma af te sluiten, druk op cijfertoets 9");
+            Console.WriteLine("Voorraad:        ");
+        }
+
         static void ShowMP3Players()
         {
             MP3Player[] mp3Players = GetMP3Players();
 
             foreach (MP3Player mp3Player in mp3Players)
             {
-                Console.WriteLine(""); // Spacing
-                Console.WriteLine(""); // Spacing
-                Console.WriteLine(""); // Spacing
-                Console.WriteLine(""); // Spacing
-                Console.WriteLine(""); // Spacing
-                Console.WriteLine(""); // Spacing
                 Console.WriteLine(""); // Spacing
                 Console.WriteLine(""); // Spacing
                 Console.WriteLine("mp3 speler " + mp3Player.id + ":");
