@@ -96,14 +96,6 @@ namespace SoundSharp
             {
                 Console.WriteLine(""); // Spacing
                 Console.WriteLine(""); // Spacing
-                Console.WriteLine(""); // Spacing
-                Console.WriteLine(""); // Spacing
-                Console.WriteLine(""); // Spacing
-                Console.WriteLine(""); // Spacing
-                Console.WriteLine(""); // Spacing
-                Console.WriteLine(""); // Spacing
-                Console.WriteLine(""); // Spacing
-                Console.WriteLine(""); // Spacing
                 Console.WriteLine("mp3 speler " + mp3Player.id + ":");
                 Console.WriteLine(""); // Spacing
                 Console.WriteLine("Merk:             " + mp3Player.make);
