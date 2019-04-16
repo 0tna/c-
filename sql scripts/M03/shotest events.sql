@@ -1,0 +1,1 @@
+SELECT EventName, len(EventName) as 'lenght of name' FROM tblEvent

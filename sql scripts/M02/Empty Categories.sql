@@ -1,0 +1,1 @@
+SELECT * FROM tblEvent right outer join tblCategory on tblEvent.CategoryID = tblCategory.CategoryID WHERE EventID is null
